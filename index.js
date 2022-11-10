@@ -103,6 +103,11 @@ window.onload = loadPeopleList;
 function loadPeopleList() {
 
   const tableBody = document.getElementById("peopleListTableBody")
+  tableBody.style = "border:2px solid black"
+
+  const tableList = document.getElementById("peopleListTable")
+  tableList.style = "border:2px solid black"
+
 
   for (let person of people) {
     personRow(tableBody, person);
@@ -116,19 +121,24 @@ function personRow(tbody, person) {
 
   let peopleid = row.insertCell(0);
   peopleid.innerHTML = person.id;
+  peopleid.style = "border:2px solid black"
 
   let peopleFirts = row.insertCell(1);
   peopleFirts.innerHTML = person.firstName;
+  peopleFirts.style = "border:2px solid black"
 
 
-  let propleLast = row.insertCell(2);
-  propleLast.innerHTML = person.lastName;
+  let peopleLast = row.insertCell(2);
+  peopleLast.innerHTML = person.lastName;
+  peopleLast.style = "border:2px solid black"
 
   let peopleEmail = row.insertCell(3);
   peopleEmail.innerHTML = person.email;
+  peopleEmail.style = "border:2px solid black"
 
   let peopleIp = row.insertCell(4);
   peopleIp.innerHTML = person.ipAddress;
+  peopleIp.style = "border:2px solid black"
 
 
 }
